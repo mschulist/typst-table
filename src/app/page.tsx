@@ -39,12 +39,19 @@ export default function Home() {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center">
+        <h1 className="text-4xl font-bold mb-4">CSV to Typst Table</h1>
+        <p className="text-lg mb-4">
+          Copy and paste your CSV data (from Excel/Sheets) into the box below and click generate to
+          generate a Typst table.
+        </p>
+      </div>
         <textarea
           className="w-[60vw] bg-gray-800 p-4 text-white text-lg h-[40vh] resize-none"
           value={csvData}
           onChange={handleInputChange}
         />
-        <button onClick={parseInput} className="border-4 p-2 rounded-lg">Submit</button>
+        <button onClick={parseInput} className="border-4 p-2 rounded-lg m-4">Generate</button>
       
         <textarea
           className="w-full bg-gray-800 p-4 text-white text-lg h-[40vh] resize-none"
